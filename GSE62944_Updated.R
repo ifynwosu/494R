@@ -54,3 +54,4 @@ norm <- getGEOSuppFiles(GEO = "GSE62944", makeDirectory = F, baseDir = "dataDir"
 norm <- read_tsv("dataDir/GSE62944_06_01_15_TCGA_24_Normal_CancerType_Samples.txt.gz")
 vector <- match(pull(norm[1]), bc_df, nomatch=0)
 print(sum(vector))
+#There are no normal samples included in the metadata table
