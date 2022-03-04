@@ -4,11 +4,5 @@ library(tidyverse)
 download.file("https://dcc.icgc.org/api/v1/download?fn=/current/Projects/BRCA-KR/donor.BRCA-KR.tsv.gz", destfile = "~")
 icgcDonor <- read_tsv(gzfile("donor.BRCA-KR.tsv.gz"))
 
-download.file("https://dcc.icgc.org/api/v1/download?fn=/current/Projects/BRCA-KR/donor_exposure.BRCA-KR.tsv.gz", destfile = "~")
-icgcExposure <- read_tsv(gzfile("donor_exposure.BRCA-KR.tsv.gz"))
-
-download.file("https://dcc.icgc.org/api/v1/download?fn=/current/Projects/BRCA-KR/donor_family.BRCA-KR.tsv.gz", destfile = "~")
-icgcFamily <- read_tsv(gzfile("donor_family.BRCA-KR.tsv.gz"))
-
-download.file("https://dcc.icgc.org/api/v1/download?fn=/current/Projects/BRCA-KR/donor_surgery.BRCA-KR.tsv.gz", destfile = "~")
-icgcSurgery <- read_tsv(gzfile("donor_surgery.BRCA-KR.tsv.gz"))
+download.file("https://dcc.icgc.org/api/v1/download?fn=/current/Projects/BRCA-KR/specimen.BRCA-KR.tsv.gz", destfile = "~")
+icgcSpecimen <- read_tsv(gzfile("specimen.BRCA-KR.tsv.gz"))
