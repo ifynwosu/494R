@@ -48,3 +48,9 @@ for(i in 1:ncol(bc_df)){
 }
 
 bc_df <- remove_empty(bc_df, "cols")
+
+#match to see if bc_df includes normal breast tissue
+norm <- getGEOSuppFiles(GEO = "GSE62944", makeDirectory = F, baseDir = "dataDir", filter_regex = "GSE62944_06_01_15_TCGA_24_Normal_CancerType_Samples.txt.gz")
+norm <- read_tsv("dataDir/GSE62944_06_01_15_TCGA_24_Normal_CancerType_Samples.txt.gz")
+vector <- match(pull(norm[1]), bc_df, nomatch=0)
+print(sum(vector))
